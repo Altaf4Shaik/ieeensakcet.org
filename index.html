@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="author" content="Altaf" >
+  <title>IEEE NSAKCET</title>
+</head>
+<body>
+
+  <div id="app">
+  <v-app>
+    <v-navigation-drawer v-model="drawer" app>
+    <v-list dense>
+    <v-list-item link href="#home">
+    <v-list-item-action>
+    <v-icon>mdi-home</v-icon>
+    </v-list-item-action>
+    <v-list-item-content>
+    <v-list-item-title>Home</v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    <v-list-item link href="#form">
+    <v-list-item-action>
+    <v-icon>mdi-contact-mail</v-icon>
+    </v-list-item-action>
+    <v-list-item-content>
+    <v-list-item-title>Contact</v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    
+    
+    <v-list-group>
+    <template v-slot:activator>
+    <v-list-item-action>
+    <v-icon>mdi-cloud</v-icon>
+    </v-list-item-action>
+    <v-list-item-content>
+    <v-list-item-title>
+      More
+    </v-list-item-title>
+    </v-list-item-content>
+    </template>
+    
+    <v-list-item>
+    <v-list-item-content>
+    <v-list-item link href="#about">
+    <v-list-item-title>
+      About 
+    </v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+    <v-list-item-content>
+    <v-list-item link href="#servises">
+    <v-list-item-title>
+      Services
+    </v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+    <v-list-item-content>
+     <v-list-item link href="#aim">
+    <v-list-item-title>
+       Aim
+    </v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+    <v-list-item-content>
+       <v-list-item link href="#events">
+    <v-list-item-title>
+      Events Gallery 
+    </v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    </v-list-group>
+    
+    <v-list-item link href="#sma">
+    <v-list-item-action>
+    <v-icon>mdi-login</v-icon>
+    </v-list-item-action>
+    <v-list-item-content>
+    <v-list-item-title>Social Media Accounts</v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    <v-list-item link href="#web">
+    <v-list-item-action>
+    <v-icon>mdi-calendar-multiple-check</v-icon>
+    </v-list-item-action>
+    <v-list-item-content>
+    <v-list-item-title>Webinars</v-list-item-title>
+    </v-list-item-content>
+    </v-list-item>
+    
+    </v-list>
+    </v-navigation-drawer>
+    
+      <v-app-bar app color="blue" dark >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" ></v-app-bar-nav-icon>
+      
+      <v-toolbar-title class="font-weight-bold" >IEEE </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+      <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      </v-app-bar> 
+      <v-content>
+         <v-carousel hide-delimiters height="350" id="home">
+           <v-carousel-item
+            v-for="(item,i) in carousel"
+            :key="i"
+            :src="item.src"
+            >
+           </v-carousel-item>
+         </v-carousel>
+        <v-container>
+          <v-row class="font-weight-light text-center" style="font-size:18px; color:#444;" >
+           <v-col cols="12">
+            <h1 class="display-1 my-5 font-weight-light" > IEEE NSAKCET   </h1>
+           <v-divider></v-divider>
+           </v-col>
+           
+          <v-parallax
+          dark
+          src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+          height="400" 
+          class="my-8 mx-n4" 
+          >
+          <v-row  align="center" justify="center" >
+           <v-col class="text-center" cols="12">
+            <h1 class="display-1 font-weight-thin mb-4">Vision and Mission</h1>
+            <h3 class="subheading font-weight-light px-2">
+In IEEENSAKCET  we aim to introduce the IEEE to the students in our branch and give them a general Idea of what is the IEEE and what it offers for you and create a connection between them and the best community out there to reach to there fellow knowledge seekers also we hold different kind of events ,workshops , training , volunteer works…etc all for the purpose of a better society and better world.
+
+</h3>
+           </v-col>
+          </v-row>
+          </v-parallax>
+
+           
+        <v-col cols="12" md="4">
+             <v-hover v-slot:default="{ hover }">
+              <v-card class="mx-auto pb-4 mb-5" id="sma" max-width="200" :elevation="hover ? 12 : 2">
+                       <a href="https://www.facebook.com/ieeensakcet/"> <v-btn icon class="pa-12 mb-4" color="#3b5998" >
+                <v-icon class="display-4" >mdi-facebook</v-icon>
+               </v-btn></a>
+               <p class="px-7">
+               
+               </p>
+             </v-card>
+             </v-hover>
+            </v-col>
+            
+ <v-col cols="12" md="4">
+             <v-hover v-slot:default="{ hover }">
+              <v-card class="mx-auto pb-4 mb-5" max-width="200" :elevation="hover ? 12 : 2">
+                       <a href="https://www.linkedin.com/feed/update/urn:li:activity:6686589005561163776"> <v-btn icon class="pa-12 mb-4" color="blue" >
+                <v-icon class="display-4" >mdi-linkedin</v-icon>
+               </v-btn></a>
+               <p class="px-7">
+               
+               </p>
+             </v-card>
+             </v-hover>
+            </v-col>
+            <v-col cols="12" md="4">
+             <v-hover v-slot:default="{ hover }">
+              <v-card class="mx-auto pb-4 mb-5" max-width="200" :elevation="hover ? 12 : 2">
+           <a href="https://instagram.com/ieeensakcet?igshid=ietfvwe837i3">   <v-btn icon class="pa-12 mb-4" color="red" >
+                <v-icon class="display-4" >mdi-instagram</v-icon>
+              </v-btn></a>
+              <p class="px-7">
+            
+              </p>
+             </v-card>
+            </v-hover>
+           </v-col>
+            
+            <v-col cols="12" md="4">
+             <v-hover v-slot:default="{ hover }">
+              <v-card class="mx-auto pb-4 mb-5" max-width="200" :elevation="hover ? 12 : 2">
+            <a href="https://twitter.com/ieeensakcet?s=09">   <v-btn icon class="pa-12 mb-4" color="blue" >
+                <v-icon class="display-4" >mdi-twitter</v-icon>
+              </v-btn></a>
+              <p class="px-7" >
+            
+              </p>
+              </v-card>
+             </v-hover>
+            </v-col>
+          </v-row>
+          
+          
+          <v-row>
+           <v-col cols="12">
+            <h1 class="display-1 my-5 font-weight-light text-center" id="web" >Webinars - </h1>
+            <v-divider></v-divider>
+           </v-col>
+            <v-col cols="12" md="4">
+              <v-hover  v-slot:default="{ hover }">
+                <v-card class="mx-auto" max-width="400" :elevation="hover ? 12 : 2">
+                <v-img
+                 class="white--text align-end"
+                 height="400px"
+                 src="https://drive.google.com/uc?export=view&id=1qhq_nXE_fAG8julcoYuFR8FAm8lzSLEQ"
+                 >
+                <v-card-title>ieeensakcet.com</v-card-title>
+                </v-img> 
+                <v-card-subtitle>
+                 4th June
+                </v-card-subtitle>
+                <v-card-text class="text--primary">
+                <p>
+                 <h3>"DIGITAL MARKETING AS A CAREER"</h3><br>
+
+IEEE NSAKCET SB will be setting out their first webinar on "Digital Marketing As A Career" where we can get to know in detail about digital marketing, it's scope, fundamentals, tools and a lot more by the phenomenal Entrepreneur  Mr. Nikeelu Gunda.<br>
+
+Date : 4th June 2020, Thursday<br>
+
+Time : 7:00 pm - 8:00 pm
+
+
+                </p>
+                </v-card-text>
+                <v-divider></v-divider>
+                <v-card-actions>
+                <v-btn color="red" text >Share</v-btn>
+                </v-card-actions>
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1qlFdZHLN5Zg9zGhv6BF8ID7Nb9rooZ8n"
+            >
+            <v-card-title>ieeensakcet.com</v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+            12th June
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+      <h3> "GENDER BARRIERS AND LEADERSHIP"</h3><br>
+
+In collaboration with Lords E-cell, we the IEEE SB NSAKCET present you a far reaching webinar on "Gender Barriers and Leadership" by an eminent speaker "Maleeha Masih".<br>
+Date: 12/6/2020<br>
+Time: 4:00 PM
+
+
+            </p>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+            <v-btn color="red" text >Share</v-btn>
+            </v-card-actions>
+            </v-card>
+            </v-hover>
+            </v-col>
+            
+            <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1qpWVm3L_yNlg-ewNiMQhKUkkip-RuHqs"
+            >
+            <v-card-title>ieeensakcet.com</v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        14th June
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+           <h3> "Insights on Data Science"</h3><br>
+             
+               “Data is a precious thing and will last longer than the systems themselves.”<br>
+
+IEEE NSAKCET SB  will be setting out their second technical webinar on "Insights on Data Science" where we can get to know in detail about how to use our skills in math, statistics, programming, and other related subjects to organize large data sets and apply our knowledge to uncover solutions hidden in data to take on business challenges and goals by the most enlightening speaker "Mr. Vijay Pravin Maharajan".<br>
+
+ Date : 14th June 2020, Sunday<br>
+ Time : 5:00 pm - 6:00 pm
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+          
+          
+          <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1qv-mOs96gVDJ7c_r-90ybbSg3pAU6w3U">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        20th June
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>"Define Success for yourself"</h3><br>
+           “Success is liking yourself, liking what you do, and liking how you do it.”― Maya Angelou.<br>
+
+A webinar conducted by the  IEEE NSAKCET Student Branch on “Define Success for yourself and achieve it with High Performance Habits….” where you get to realize your own version of success and the right habits that lead to sustain long-term success by an esteemed speaker "Mrs. Syeda Zainab Fatima".<br>
+Date : 20th June 2020,Saturday<br>
+Time : 2:00 pm - 3:00 pm
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+            
+            <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1qqHQ-4BzRSOr_sYeZbNf5141r19E3fcT">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        25th June
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>“How to start a career in cyber security and awareness on cyber crimes”</h3><br>
+           “For every lock, there is someone out there trying to pick it or break it”― David Bernstein.<br>
+
+
+A webinar is being organized by the IEEE NSAKCET Student Branch  on the topic, “How to start a career in cyber security and awareness on cyber crimes”. Where you get to realize that, one single vulnerability is all what attacker needs and also you understand that, the only thing that can stop a bad guy in internet is a good guy in internet by a determined speaker "Mr. Santosh Chaluvadi", Founder and CEO of Supraja Technologies.<br>
+
+Date :25th June 2020<br>
+
+Time : 4:30 pm - 6:00 pm
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+            
+            
+        <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1r0tGtbxgHZYNLwRSCY_RUzgoZdCNIMrB">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        27th June
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>“Data Science Applications and Opportunities”</h3><br>
+           
+           
+           "Data is becoming the new raw material of business" - Craig Mundie<br>
+
+
+
+IEEE NSAKCET Student Branch is organising their second Data Science webinar on the topic, “Data Science Applications and Opportunities”.
+
+Where you can get an opportunity to explore the applications of Data Science and the possibilities in the field by an enthusiastic speaker "Dr. Salman Abdul Moiz".<br>
+
+Date : 27th June 2020<br>
+
+Time :2:00 pm - 3:00 pm
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+                
+                
+                <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1qxfT0jWp-axlXrIV4xyRSi3zaJBa-n7J">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        1st July
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>"Insights on Blockchain and Career Opportunities"</h3><br>
+           
+           “Blockchain technology is coming to replace the old, rotten system of governance around the world. Embrace it!”
+― Olawale Daniel<br>
+
+IEEE Student Branch NSAKCET will be taking their webinar series further and will be organizing its 7th webinar on "Insights on Blockchain and Career Opportunities" , a webinar that will illustrate you the capacity to gain an accurate and deep understanding on Blockchain and also showing you the opportunities and scope to build a career applying Blockchain by none other than "Mr. Aravind Voruganti".<br>
+
+Date : 1st July ,Wednesday <br>
+
+Time : 4:00 pm - 5:00 pm
+    
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+                
+            
+            <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=1r6WfSnY9diRJqyeE8JVWILkJmRLNOyxz">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        6th July
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>"An IoT Forecast That's Sunny And Clear (No Clouds)"</h3><br>
+           
+           “If you invent a breakthrough in artificial intelligence, so machines can learn, that is worth 10 Microsofts.” — Bill Gates<br>
+
+We encourage you all to join the 8th webinar of our webinar series that is organized by the  IEEE Student Branch NSAKCET  with a far-reaching topic "An IoT Forecast That's Sunny And Clear (No Clouds)" a webinar that demonstrates how to run the WebThings Gateway in a Docker container on your favorite platform to manage IoT devices that you build or buy. The webinar will be presented by "Kathy Giori" an international speaker with an ambitious and enthusiastic personality.<br>
+Date : 6th July, Monday<br>
+
+Time : 8:00PM - 9:00PM IST<br>
+                 14:30 - 15:30 UTC
+    
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+            
+            
+            <v-col cols="12" md="4">
+            <v-hover  v-slot:default="{ hover }">
+            <v-card class="mx-auto" max-width="400px" :elevation="hover ? 12 : 2">
+            <v-img
+            class="white--text align-end"
+            height="400px"
+            src="https://drive.google.com/uc?export=view&id=14ZLDrpJSvBp0f1yW80KZjIUlrc5yR4nL">
+            <v-card-title>ieeensakcet.com<v-card-title>
+            </v-img> 
+            <v-card-subtitle>
+        24th July
+            </v-card-subtitle>
+            <v-card-text class="text--primary">
+            <p>
+            <h3>"Confidence & Procrastination"</h3><br>
+           
+           "You need to dwell into some bit of chaos to discover oneself". ~Mrs. Syeda Fatima Bilgrami<br>
+              
+We encourage you all to join the 9th webinar of our webinar series that is organised by IEEE Student Branch of NAWAB  SHAH ALAM KHAN  COLLEGE OF ENGINEERING & TECHNOLOGY with an intriguing topic "Confidence & Procrastination" by an transfixing speaker "Mrs. Syeda Fatima Bilgrami".<br>
+
+Being confident is important in today's day to day life if you can't speak up and make your point someone else will, so rise up and be confident. Procastination  is delaying your least favourite task and focusing solely on what you like which may in turn back fire.
+
+So join in and learn a few things about "Confidence and Procastination".<br>
+
+Date :24th july, Friday <br>
+
+Time :4:30 PM IST
+    
+            </p>
+            </v-card-text>
+             <v-divider></v-divider>
+              <v-card-actions>
+               <v-btn color="red" text >Share</v-btn>
+              </v-card-actions>
+             </v-card>
+            </v-hover>
+            </v-col>
+            
+          </v-row>
+          
+          <!-- timeline section -->
+          <v-row> 
+          <v-col cols="12">
+            <h1 class="display-1 my-5 font-weight-light text-center" id="aim" >Why is IEEE? - </h1>
+            <v-divider></v-divider>
+          </v-col>
+           <v-col cols="12">
+             <v-timeline dense>
+              <v-timeline-item color="red"   
+              right
+              >
+                 <v-card class="elevation-2">
+                    <v-card-title class="headline red--text">Recruit</v-card-title>
+                      <v-card-text>
+                        Recruiting the right students is a powerful measure to enhance the number of successful graduations and to reduce drop-out. The search for the right students is not limited to German Higher Engineering Education, but can be found in any higher educational system. we focuses on the most suitable approaches for German Universities to select the best engineering students when allocating study places for an education in the field of engineering.
+                     </v-card-text>
+                 </v-card>
+               </v-timeline-item>
+               <v-timeline-item color="indigo"   
+               small
+               left
+               >
+               <v-card class="elevation-2">
+               <v-card-title class="headline indigo--text">Volunteer</v-card-title>
+               <v-card-text>
+                 As an IEEE volunteer, you will play a key role in the future of the organization. From technical and student activities to student outreach, membership development, and history, you can impact your area of expertise. Become an IEEE volunteer today so you can: Take pride in participating in activities that interest you.
+               </v-card-text>
+               </v-card>
+               </v-timeline-item>
+               
+               <v-timeline-item color="purple"   
+               right
+               >
+               <v-card class="elevation-2">
+               <v-card-title class="headline purple--text">Events & programs</v-card-title>
+               <v-card-text>
+        IEEE, via its different bodies, organizes numerous conferences and meetings on a wide range of topics. IEEE's European Public Policy organizes various events bringing together leading technologists, scientists, engineers, and policy makers to discuss critical issues related to technology and public policy in Europe. The aim is to empower European IEEE members to become more involved at the European Union (EU) level, while at the same time leveraging IEEE’s expertise to provide the European policy community with unbiased expert input on important technology-related policy topics.
+               </v-card-text>
+               </v-card>
+               </v-timeline-item>
+               
+             </v-timeline>    
+           </v-col>
+          </v-row>
+          <!-- Events  gallery -->
+          <v-row>
+           <v-col cols="12">
+             <h1 class="display-1 my-5 font-weight-light text-center" id="events">Events Gallery - </h1>
+             <v-divider></v-divider>
+           </v-col>
+            <v-col
+            v-for="(item, i) in gallery"
+            :key="i"
+            class="d-flex child-flex"
+            cols="6" md="4">
+           <v-card flat tile class="d-flex">
+           
+            <v-img
+            :src="`${item.img}`"
+            lazy-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUsus8Ozq-5ZQwYsyBC-8DS11l8ufrZSx1QBY7fKclf_8N6Crd"
+            aspect-ratio="1"
+            class="grey lighten-2"
+           >
+              <template v-slot:placeholder>
+               <v-row
+                 class="fill-height ma-0"
+                align="center"
+               justify="center" >
+                <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+             </v-row>
+            </template>
+           </v-img>
+          </v-card>
+         </v-col>
+        </v-row> 
+        
+        <v-parallax
+          dark
+          src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+          height="400" 
+          class="my-8 mx-n4" 
+          >
+          <v-row  align="center" justify="center" >
+           <v-col class="text-center" cols="12">
+            <h1 class="display-1 font-weight-thin mb-4">Vision and Mission</h1>
+            <h3 class="subheading font-weight-light px-2" id="about">IEEE is the place where you will discover opportunities to embrace today’s technology challenges and find ways to change tomorrow for the better.
+We offer an open environment for the technology community to share information that helps keep technologists informed and educated on critical, game-changing innovations in the emerging fields of artificial intelligence, quantum computing, sustainable energy and much more. As the world evolves, so does IEEE.
+</h3>
+           </v-col>
+          </v-row>
+          </v-parallax>
+        
+          <!-- Memberships  section -->
+          <v-row>
+           <v-col cols="12">
+             <h1 class="display-1 my-5 font-weight-light text-center" id="servises" >Operating Committee Memberships - </h1>
+             <v-divider></v-divider>
+           </v-col>
+           <v-col cols="12">
+            <v-list three-line>
+             <v-subheader class="text-uppercase" > Responsibilities</v-subheader>
+             <v-list-item-group v-model="list" color="primary">
+             <v-list-item
+               v-for="(item, i) in lists"
+               :key="i"
+               style="border-bottom:1px solid #f5f5f5;" 
+                >
+              <v-list-item-icon>
+              <v-icon color="blue" large>mdi-account-circle</v-icon>
+               </v-list-item-icon>
+              <v-list-item-content>
+             <v-list-item-subtitle v-text="item.text"></v-list-item-subtitle>
+            </v-list-item-content>
+    
+            </v-list-item>
+          </v-list-item-group>
+         </v-list>
+             
+           </v-col>
+          </v-row>
+          
+         <!-- form section start --> 
+          
+         <v-form ref="form" v-model="valid" lazy-validation id="form">
+            <v-row class="pa-5" >
+               <v-col cols="12">
+                 <h1 class="display-1 my-5 font-weight-light text-center" >Contact me - </h1>
+                 <v-divider></v-divider>
+               </v-col>
+               <v-col cols="12" md="6">
+                  <v-text-field
+                    v-model="name"
+                    :counter="10"
+                    :rules="nameRules"
+                    label="Name"
+                    required>
+                  </v-text-field>
+                </v-col>
+                <v-col cols="12" md="6">
+                  <v-text-field
+                     v-model="email"
+                     :rules="emailRules"
+                     label="E-mail"
+                     required>
+                  </v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-textarea 
+                   label="Message" 
+                   v-model="msg"
+                   :counter="120"
+                   :rules="msgRules"
+                   required
+                  >
+                  </v-textarea>
+                 </v-col>
+                 <v-col cols="12" md="6">
+                   <v-btn :disabled="!valid" color="primary"  class="mr-4" @click="validate">
+                     Submit
+                   </v-btn>
+                   <v-btn color="error" class="mr-4" @click="reset" >
+                     Reset Form
+                   </v-btn>
+                </v-col>
+             </v-row>
+          </v-form>
+          
+        </v-container>
+      </v-content>
+      
+      <ol>
+        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:6686589005561163776"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://www.facebook.com/ieeensakcet/"><i class="fa fa-facebook"></i></a></li>
+         <li>
+             
+         <a href="https://twitter.com/ieeensakcet?s=09"><i class="fa  fa-twitter"></i></a></li>
+         <li>
+      <a href="https://instagram.com/ieeensakcet?igshid=ietfvwe837i3"> <i class="fa fa-instagram"></i></a></li>
+      </ol>   <br>
+      
+   <!-- footer section start   -->
+   <v-footer dark padless >
+     <v-card flat tile class="blue lighten-1 white--text text-center">
+      <v-card-text>
+        <v-btn class="mx-4 white--text" text href="https://docs.google.com/forms/d/e/1FAIpQLScqnICww9HQLJoFFuBDymNhvjFAn-8WL_eAbQuYNeM9MnTVVw/viewform">Join-Us</v-btn>
+        <v-btn class="mx-4 white--text" text
+href="https://www.facebook.com/ieeensakcet/"> facebook </v-btn>
+        <v-btn class="mx-4 white--text" text
+ href="https://instagram.com/ieeensakcet?igshid=ietfvwe837i3">Instagram </v-btn>
+        
+      </v-card-text> 
+      <v-card-text class="white--text pt-0">
+    
+   16-4-1, New Malakpet, Near Railway Station, Kala Dera, Malakpet, Hyderabad, Telangana 500024, India. 
+      </v-card-text>
+        <v-divider></v-divider>
+      <v-card-text class="white--text">
+        COPYRIGHT &copy; {{ new Date().getFullYear() }}. All Right Reserved By - <strong>ieeensakcet</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+ </v-app>
+</div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data:{
+        msg:"hello",
+        drawer:null,
+        carousel: [
+        { src: 'https://drive.google.com/uc?export=view&id=19-6g1HJw0MKgdUmBsnhxzVQ3sdW1szzP'},
+        { src: 'https://drive.google.com/uc?export=view&id=17-canl53ViJqPeJi29niQcyu2NHmk5KY'},
+        { src: 'https://drive.google.com/uc?export=view&id=176oQKlMdDe0TqN-igMYc1RIMZmfW1PNL'},
+        { src: 'https://drive.google.com/uc?export=view&id=17I6gkQnaaRuEu5oGYVHLZKoRuADeTGE-' }
+        ],
+        list: 0,
+        lists: [
+        { text: 'PROGRAM COMMITTEE' },
+        { text: 'Program Committee:responsible for planning activities for the year.' },
+        { text: 'MEMBERSHIP COMMITTEE' },
+        { text: 'Membership Committee:responsible for recruiting members.'},
+        { text: 'PUBLICITY COMMITTEE'},
+        { text: 'Publicity Committee:responsible for advertising activities.'},
+        { text: 'SOCIAL MEDIA COMMITTEE'},
+        { text: 'Social Media Committee:responsible for posting branch activities and advertisements on IEEE Twitter,Facebook and Instagram.Manage the branch website and Whatsapp.'},
+        ],
+        valid: true,
+        name: '',
+        nameRules: [
+        v => !!v || 'Name is required',
+        v => (v && v.length <= 20) || 'Name must be less than 20 characters',
+        ],
+        email: '',
+        emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        ],
+        msg:'',
+        msgRules:[
+         v => !!v || 'Message is required',
+         v => (v && v.length <= 120) || 'Message must be less than 120 characters',    
+        ],
+        gallery:[
+         {img:'https://drive.google.com/uc?export=view&id=15EKielCFm4Q8A6tcLB5Wm3n7Xa61O3Qd'},
+         {img:'https://drive.google.com/uc?export=view&id=1nEa8ASQlrtWZKtPsiQgtRtwUWWWbiC9s'},
+         {img:'https://drive.google.com/uc?export=view&id=1py-CJZCTNsVjqZ5n_UdGY84OBG8chVv7'},
+         {img:'https://drive.google.com/uc?export=view&id=1sQ7rCtUmYr0pFIsso-mpZaDkYiOcn_UH'},
+         {img:'https://drive.google.com/uc?export=view&id=1pu6GOE3XE61vHxGSkqQ9x3U4rt5BDSl-'},
+         {img:'https://drive.google.com/uc?export=view&id=1q5NspsXweTdOEXrfQUG9HC9a5cCIg8eT'}
+        ]
+      },
+      methods:{
+       validate () {
+       if (this.$refs.form.validate()) {
+        this.snackbar = true
+        alert("Thank you for your Message");
+        this.reset();
+       }
+       },
+       reset () {
+        this.$refs.form.reset()
+       },
+      }
+    })
+  </script>
+</body>
+</html>
