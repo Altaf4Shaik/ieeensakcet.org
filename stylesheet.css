@@ -1,0 +1,65 @@
+ol{
+    position:relative;
+    display:flex;
+    list-style-type:none;
+}
+ol li{
+    position:relative ;
+    list-style:none;
+}
+ol li a{
+    position:relative;
+    height:60px;
+    width:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    margin:0px 0px 0px 15px;
+    box-shadow:inset -3px -3px 9px rgba(0,0,0,.3),
+    3px 3px 9px rgba(0,0,0,.5);
+    transition:0.5s;
+}
+ol li .fa{
+    position:relative;
+    color:#fff;
+}
+ol li a:before{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    border:1px solid #777;
+    border-radius:50%;
+    box-shadow:inset 3px 3px 9px rgba(0,0,0,.5),
+                3px 3px 9px rgba(0,0,0,.3);
+    
+    
+}
+ol li:nth-child(1) a:before{
+    background:#0984e3;
+}
+ol li:nth-child(2) a:before{
+    background:#4169E1;
+}
+ol li:nth-child(3) a:before{
+    background:#a29bfe;
+}
+ol li:nth-child(4) a:before{
+    background:#FF6347;
+}
+
+ol li a:hover{
+    transform:scale(1.2)translateY(-10px);
+    box-shadow:inset -5px -5px 15px rgba(0,0,0,.3),
+                10px 10px 25px rgba(0,0,0,.5);
+    cursor:pointer;
+}
+ol li a .fa{
+    font-size:1.5em;
+    text-shadow:2px 2px 6px rgba(0,0,0,.9);
+}
